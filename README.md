@@ -14,7 +14,7 @@ An improved version for Deep Learning Toolbox CNN
 
 4. Pad size 28*28 to 32*32 with value 0
 
-5. Other minor changes which is not important
+5. Other minor changes which are not important
 
 @MASTERSTHESIS\{IMM2012-06284,
 
