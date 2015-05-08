@@ -56,6 +56,7 @@ cnn.layers = {
 opts.alpha = 1;
 opts.batchsize = 50;
 opts.numepochs = 1;
+opts.stepsize = 10;
 cnn.activation = 'Sigmoid'; % now we have Relu and Sigmoid activation functions
 cnn.pooling_mode = 'Mean'; %now we have Mean and Max pooling
 cnn.output = 'Softmax';% noe we have Softmax and Sigmoid output function
@@ -67,10 +68,9 @@ for i = 1 : opts.iteration
     fprintf('%d iterations and rate of error : %d\n',i,er);
     %[er1, bad1] = cnntest(cnn, val_x, val_Label);
     %fprintf('%d iterations and rate of error (validation) : %d\n',i,er1);
-    %if mod(i,10) == 0
-    %if mod(i,3) == 0
-    %    opts.alpha = opts.alpha/10;%change learning rate
-    %end
+    if mod(i,opts.stepsize) == 0
+        opts.alpha = opts.alpha/10;%change learning rate
+    end
 end
 %[er, bad] = cnntest(cnn, test_x, test_y);
 fprintf('Taux of error : %d\n',er(i));
