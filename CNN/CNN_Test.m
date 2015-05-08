@@ -1,4 +1,8 @@
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tutor : PierreHao (Hao ZHANG)
+% Company : NanJing Qingsou 
+% Note : if you publish this code, do not forget @me 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear all
 close all
