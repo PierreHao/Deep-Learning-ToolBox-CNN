@@ -16,6 +16,10 @@ An improved version for Deep Learning Toolbox CNN
 
 5. Other minor changes which are not important
 
+6. Add softmax
+
+7. Add stepsize for changing learning rate
+
 @MASTERSTHESIS\{IMM2012-06284,
 
     author       = "R. B. Palm",
