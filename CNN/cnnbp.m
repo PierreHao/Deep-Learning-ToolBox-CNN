@@ -7,11 +7,16 @@ function net = cnnbp(net, y)
     net.L = 1/2* sum(net.e(:) .^ 2) / size(net.e, 2); % mean of batchSize images
     %net.L = -sum(sum(y .* log(net.o))) / size(net.e, 2);
     %%  backprop deltas
+    net.od = net.e .* (net.o .* (1 - net.o));
+    %if output use softmax, then the last layer use sigmoid
+    
+    %{
     if strcmp(net.activation,'Sigmoid')
         net.od = net.e .* (net.o .* (1 - net.o));   %  output delta
     else
         net.od = net.e;% Relu
     end
+    %}
     net.fvd = (net.ffW' * net.od);              %  feature vector delta
     if strcmp(net.layers{n}.type, 'c')         %  only conv layers has sigm function
         switch net.activation
