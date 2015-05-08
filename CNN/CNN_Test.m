@@ -55,6 +55,7 @@ opts.numepochs = 1;
 cnn.testing = 0;
 cnn.activation = 'Sigmoid'; % now we have Relu and Sigmoid activation functions
 cnn.pooling_mode = 'Mean'; %now we have Mean and Max pooling
+cnn.output = 'Softmax';% noe we have Softmax and Sigmoid output function
 opts.iteration = 1;
 cnn = cnnsetup(cnn, train_x, train_y);
 for i = 1 : opts.iteration
